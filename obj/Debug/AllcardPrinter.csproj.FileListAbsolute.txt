@@ -1,0 +1,15 @@
+D:\WORK\Projects\AllcardPrinter\bin\Debug\AllcardPrinter.exe.config
+D:\WORK\Projects\AllcardPrinter\bin\Debug\AllcardPrinter.exe
+D:\WORK\Projects\AllcardPrinter\bin\Debug\AllcardPrinter.pdb
+D:\WORK\Projects\AllcardPrinter\bin\Debug\Allcard.Printer.Evolis.dll
+D:\WORK\Projects\AllcardPrinter\bin\Debug\Allcard.Printer.Evolis.pdb
+D:\WORK\Projects\AllcardPrinter\bin\Debug\Allcard.Printer.Evolis.xml
+D:\WORK\Projects\AllcardPrinter\obj\Debug\AllcardPrinter.csproj.AssemblyReference.cache
+D:\WORK\Projects\AllcardPrinter\obj\Debug\AllcardPrinter.csproj.SuggestedBindingRedirects.cache
+D:\WORK\Projects\AllcardPrinter\obj\Debug\AllcardPrinter.Form1.resources
+D:\WORK\Projects\AllcardPrinter\obj\Debug\AllcardPrinter.Properties.Resources.resources
+D:\WORK\Projects\AllcardPrinter\obj\Debug\AllcardPrinter.csproj.GenerateResource.cache
+D:\WORK\Projects\AllcardPrinter\obj\Debug\AllcardPrinter.csproj.CoreCompileInputs.cache
+D:\WORK\Projects\AllcardPrinter\obj\Debug\AllcardPrinter.csproj.CopyComplete
+D:\WORK\Projects\AllcardPrinter\obj\Debug\AllcardPrinter.exe
+D:\WORK\Projects\AllcardPrinter\obj\Debug\AllcardPrinter.pdb

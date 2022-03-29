@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllcardPrinter", "AllcardPrinter.csproj", "{8D86F311-8340-474B-9B9A-D1F744B627AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D86F311-8340-474B-9B9A-D1F744B627AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D86F311-8340-474B-9B9A-D1F744B627AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D86F311-8340-474B-9B9A-D1F744B627AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D86F311-8340-474B-9B9A-D1F744B627AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7AD26B39-AFDA-4E63-8623-71A643A69F91}
+	EndGlobalSection
+EndGlobal
