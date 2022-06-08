@@ -19,10 +19,11 @@ namespace AllcardPrinter
         }
 
         Allcard.Printer.Evolis.Process prcs = null;
+        private string printerFile = string.Concat(Application.StartupPath, "\\printer");
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            if (System.IO.File.Exists(printerFile)) txtPrinterName.Text = System.IO.File.ReadAllText(printerFile);
         }
 
         private void btnFeed_Click(object sender, EventArgs e)
@@ -103,13 +104,14 @@ namespace AllcardPrinter
         }
 
         private void btnInit_Click(object sender, EventArgs e)
-        {         
-            //System.IO.File.AppendAllLines(@"D:\pagibig-evolis-log.txt", new[] { string.Concat(DateTime.Now.ToString(), " ", "TEST") });
-            //return;
-            
-            
-            string printerFile = System.IO.File.ReadAllText(string.Concat(Application.StartupPath, "\\printer"));
-            prcs = new Allcard.Printer.Evolis.Process(printerFile);
+        {
+            if (txtPrinterName.Text == "") return;
+
+            System.IO.File.WriteAllText(printerFile, txtPrinterName.Text);
+
+            //string printerFile = System.IO.File.ReadAllText(string.Concat(Application.StartupPath, "\\printer"));
+            string printerName = txtPrinterName.Text;
+            prcs = new Allcard.Printer.Evolis.Process(printerName);
             if (prcs.Initialize())
             {
                 lblPrinterSerial.Text = String.Concat("Printer Serial: ", prcs.GetPrinterSerial());
@@ -225,8 +227,7 @@ namespace AllcardPrinter
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //if (prcs != null) prcs.ExecuteCommand(txtTrack1.Text);
-            prcs.GetPrinterStatus();
+            if (prcs != null) prcs.ExecuteCommand(txtTrack1.Text);            
             LogToRTB(prcs.GetMessage);
         }
 

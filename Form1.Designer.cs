@@ -36,6 +36,8 @@
             this.btnReadMag = new System.Windows.Forms.Button();
             this.btnWrite = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.lblPrinterCounter = new System.Windows.Forms.Label();
             this.lblPrinterSerial = new System.Windows.Forms.Label();
             this.btnInit = new System.Windows.Forms.Button();
@@ -49,8 +51,8 @@
             this.btnPreview = new System.Windows.Forms.Button();
             this.btnPrint = new System.Windows.Forms.Button();
             this.rtbLog = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtPrinterName = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.grpMagstripe.SuspendLayout();
             this.grpPrint.SuspendLayout();
@@ -59,7 +61,7 @@
             // btnFeed
             // 
             this.btnFeed.Enabled = false;
-            this.btnFeed.Location = new System.Drawing.Point(129, 21);
+            this.btnFeed.Location = new System.Drawing.Point(129, 46);
             this.btnFeed.Name = "btnFeed";
             this.btnFeed.Size = new System.Drawing.Size(99, 34);
             this.btnFeed.TabIndex = 0;
@@ -71,27 +73,27 @@
             // 
             this.txtTrack1.Location = new System.Drawing.Point(102, 21);
             this.txtTrack1.Name = "txtTrack1";
-            this.txtTrack1.Size = new System.Drawing.Size(378, 23);
+            this.txtTrack1.Size = new System.Drawing.Size(378, 20);
             this.txtTrack1.TabIndex = 1;
             // 
             // txtTrack2
             // 
             this.txtTrack2.Location = new System.Drawing.Point(102, 49);
             this.txtTrack2.Name = "txtTrack2";
-            this.txtTrack2.Size = new System.Drawing.Size(378, 23);
+            this.txtTrack2.Size = new System.Drawing.Size(378, 20);
             this.txtTrack2.TabIndex = 2;
             // 
             // txtTrack3
             // 
             this.txtTrack3.Location = new System.Drawing.Point(102, 77);
             this.txtTrack3.Name = "txtTrack3";
-            this.txtTrack3.Size = new System.Drawing.Size(378, 23);
+            this.txtTrack3.Size = new System.Drawing.Size(378, 20);
             this.txtTrack3.TabIndex = 3;
             // 
             // btnEject
             // 
             this.btnEject.Enabled = false;
-            this.btnEject.Location = new System.Drawing.Point(234, 21);
+            this.btnEject.Location = new System.Drawing.Point(234, 46);
             this.btnEject.Name = "btnEject";
             this.btnEject.Size = new System.Drawing.Size(99, 34);
             this.btnEject.TabIndex = 4;
@@ -121,7 +123,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.txtPrinterName);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.lblPrinterCounter);
             this.groupBox1.Controls.Add(this.lblPrinterSerial);
@@ -130,32 +133,52 @@
             this.groupBox1.Controls.Add(this.btnEject);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(511, 105);
+            this.groupBox1.Size = new System.Drawing.Size(511, 129);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "PRINTER";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(275, 109);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(118, 34);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Run Command";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(339, 47);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(99, 34);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Printer Job";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // lblPrinterCounter
             // 
             this.lblPrinterCounter.AutoSize = true;
-            this.lblPrinterCounter.Location = new System.Drawing.Point(25, 80);
+            this.lblPrinterCounter.Location = new System.Drawing.Point(25, 105);
             this.lblPrinterCounter.Name = "lblPrinterCounter";
-            this.lblPrinterCounter.Size = new System.Drawing.Size(113, 16);
+            this.lblPrinterCounter.Size = new System.Drawing.Size(100, 13);
             this.lblPrinterCounter.TabIndex = 11;
             this.lblPrinterCounter.Text = "Printer Counter:";
             // 
             // lblPrinterSerial
             // 
             this.lblPrinterSerial.AutoSize = true;
-            this.lblPrinterSerial.Location = new System.Drawing.Point(24, 62);
+            this.lblPrinterSerial.Location = new System.Drawing.Point(24, 87);
             this.lblPrinterSerial.Name = "lblPrinterSerial";
-            this.lblPrinterSerial.Size = new System.Drawing.Size(97, 16);
+            this.lblPrinterSerial.Size = new System.Drawing.Size(87, 13);
             this.lblPrinterSerial.TabIndex = 10;
             this.lblPrinterSerial.Text = "Printer Serial:";
             // 
             // btnInit
             // 
-            this.btnInit.Location = new System.Drawing.Point(24, 21);
+            this.btnInit.Location = new System.Drawing.Point(24, 46);
             this.btnInit.Name = "btnInit";
             this.btnInit.Size = new System.Drawing.Size(99, 34);
             this.btnInit.TabIndex = 5;
@@ -165,6 +188,7 @@
             // 
             // grpMagstripe
             // 
+            this.grpMagstripe.Controls.Add(this.button2);
             this.grpMagstripe.Controls.Add(this.label3);
             this.grpMagstripe.Controls.Add(this.label2);
             this.grpMagstripe.Controls.Add(this.label1);
@@ -174,19 +198,19 @@
             this.grpMagstripe.Controls.Add(this.txtTrack3);
             this.grpMagstripe.Controls.Add(this.btnReadMag);
             this.grpMagstripe.Enabled = false;
-            this.grpMagstripe.Location = new System.Drawing.Point(12, 123);
+            this.grpMagstripe.Location = new System.Drawing.Point(12, 147);
             this.grpMagstripe.Name = "grpMagstripe";
             this.grpMagstripe.Size = new System.Drawing.Size(511, 159);
             this.grpMagstripe.TabIndex = 8;
             this.grpMagstripe.TabStop = false;
-            this.grpMagstripe.Text = "MAGSTRIPE";
+            this.grpMagstripe.Text = "MAGSTRIPE/ COMMANDS";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(24, 77);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 16);
+            this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 9;
             this.label3.Text = "Track 3";
             // 
@@ -195,7 +219,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(24, 49);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 16);
+            this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 8;
             this.label2.Text = "Track 2";
             // 
@@ -204,7 +228,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(24, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 16);
+            this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 7;
             this.label1.Text = "Track 1";
             // 
@@ -214,7 +238,7 @@
             this.grpPrint.Controls.Add(this.txtName);
             this.grpPrint.Controls.Add(this.btnPreview);
             this.grpPrint.Controls.Add(this.btnPrint);
-            this.grpPrint.Location = new System.Drawing.Point(12, 288);
+            this.grpPrint.Location = new System.Drawing.Point(12, 312);
             this.grpPrint.Name = "grpPrint";
             this.grpPrint.Size = new System.Drawing.Size(511, 113);
             this.grpPrint.TabIndex = 10;
@@ -226,7 +250,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(24, 28);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 16);
+            this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 7;
             this.label6.Text = "Name";
             // 
@@ -234,7 +258,7 @@
             // 
             this.txtName.Location = new System.Drawing.Point(102, 28);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(378, 23);
+            this.txtName.Size = new System.Drawing.Size(378, 20);
             this.txtName.TabIndex = 1;
             this.txtName.Text = "JUAN DELA CRUZ";
             // 
@@ -260,38 +284,35 @@
             // 
             // rtbLog
             // 
-            this.rtbLog.Location = new System.Drawing.Point(12, 407);
+            this.rtbLog.Location = new System.Drawing.Point(12, 431);
             this.rtbLog.Name = "rtbLog";
             this.rtbLog.ReadOnly = true;
             this.rtbLog.Size = new System.Drawing.Size(511, 69);
             this.rtbLog.TabIndex = 11;
             this.rtbLog.Text = "";
             // 
-            // button1
+            // label4
             // 
-            this.button1.Location = new System.Drawing.Point(339, 22);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 34);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Printer Job";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(46, 23);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(50, 13);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Printer:";
             // 
-            // button2
+            // txtPrinterName
             // 
-            this.button2.Location = new System.Drawing.Point(339, 61);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(118, 34);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Run Command";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.txtPrinterName.Location = new System.Drawing.Point(102, 20);
+            this.txtPrinterName.Name = "txtPrinterName";
+            this.txtPrinterName.Size = new System.Drawing.Size(378, 20);
+            this.txtPrinterName.TabIndex = 11;
+            this.txtPrinterName.Text = "Evolis Zenius";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(535, 488);
+            this.ClientSize = new System.Drawing.Size(535, 518);
             this.Controls.Add(this.rtbLog);
             this.Controls.Add(this.grpPrint);
             this.Controls.Add(this.grpMagstripe);
@@ -336,6 +357,8 @@
         private System.Windows.Forms.Label lblPrinterSerial;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtPrinterName;
+        private System.Windows.Forms.Label label4;
     }
 }
 
