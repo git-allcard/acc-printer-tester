@@ -36,6 +36,8 @@
             this.btnReadMag = new System.Windows.Forms.Button();
             this.btnWrite = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblPrinterCounter = new System.Windows.Forms.Label();
+            this.lblPrinterSerial = new System.Windows.Forms.Label();
             this.btnInit = new System.Windows.Forms.Button();
             this.grpMagstripe = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,6 +49,8 @@
             this.btnPreview = new System.Windows.Forms.Button();
             this.btnPrint = new System.Windows.Forms.Button();
             this.rtbLog = new System.Windows.Forms.RichTextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.grpMagstripe.SuspendLayout();
             this.grpPrint.SuspendLayout();
@@ -117,15 +121,37 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.lblPrinterCounter);
+            this.groupBox1.Controls.Add(this.lblPrinterSerial);
             this.groupBox1.Controls.Add(this.btnInit);
             this.groupBox1.Controls.Add(this.btnFeed);
             this.groupBox1.Controls.Add(this.btnEject);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(511, 72);
+            this.groupBox1.Size = new System.Drawing.Size(511, 105);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "PRINTER";
+            // 
+            // lblPrinterCounter
+            // 
+            this.lblPrinterCounter.AutoSize = true;
+            this.lblPrinterCounter.Location = new System.Drawing.Point(25, 80);
+            this.lblPrinterCounter.Name = "lblPrinterCounter";
+            this.lblPrinterCounter.Size = new System.Drawing.Size(113, 16);
+            this.lblPrinterCounter.TabIndex = 11;
+            this.lblPrinterCounter.Text = "Printer Counter:";
+            // 
+            // lblPrinterSerial
+            // 
+            this.lblPrinterSerial.AutoSize = true;
+            this.lblPrinterSerial.Location = new System.Drawing.Point(24, 62);
+            this.lblPrinterSerial.Name = "lblPrinterSerial";
+            this.lblPrinterSerial.Size = new System.Drawing.Size(97, 16);
+            this.lblPrinterSerial.TabIndex = 10;
+            this.lblPrinterSerial.Text = "Printer Serial:";
             // 
             // btnInit
             // 
@@ -148,7 +174,7 @@
             this.grpMagstripe.Controls.Add(this.txtTrack3);
             this.grpMagstripe.Controls.Add(this.btnReadMag);
             this.grpMagstripe.Enabled = false;
-            this.grpMagstripe.Location = new System.Drawing.Point(12, 90);
+            this.grpMagstripe.Location = new System.Drawing.Point(12, 123);
             this.grpMagstripe.Name = "grpMagstripe";
             this.grpMagstripe.Size = new System.Drawing.Size(511, 159);
             this.grpMagstripe.TabIndex = 8;
@@ -188,8 +214,7 @@
             this.grpPrint.Controls.Add(this.txtName);
             this.grpPrint.Controls.Add(this.btnPreview);
             this.grpPrint.Controls.Add(this.btnPrint);
-            this.grpPrint.Enabled = false;
-            this.grpPrint.Location = new System.Drawing.Point(12, 255);
+            this.grpPrint.Location = new System.Drawing.Point(12, 288);
             this.grpPrint.Name = "grpPrint";
             this.grpPrint.Size = new System.Drawing.Size(511, 113);
             this.grpPrint.TabIndex = 10;
@@ -235,18 +260,38 @@
             // 
             // rtbLog
             // 
-            this.rtbLog.Location = new System.Drawing.Point(12, 376);
+            this.rtbLog.Location = new System.Drawing.Point(12, 407);
             this.rtbLog.Name = "rtbLog";
             this.rtbLog.ReadOnly = true;
             this.rtbLog.Size = new System.Drawing.Size(511, 69);
             this.rtbLog.TabIndex = 11;
             this.rtbLog.Text = "";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(339, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(99, 34);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Printer Job";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(339, 61);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(118, 34);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Run Command";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(535, 455);
+            this.ClientSize = new System.Drawing.Size(535, 488);
             this.Controls.Add(this.rtbLog);
             this.Controls.Add(this.grpPrint);
             this.Controls.Add(this.grpMagstripe);
@@ -257,6 +302,7 @@
             this.Text = "ALLCARD EVOLIS PRINTER";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.grpMagstripe.ResumeLayout(false);
             this.grpMagstripe.PerformLayout();
             this.grpPrint.ResumeLayout(false);
@@ -286,6 +332,10 @@
         private System.Windows.Forms.Button btnPreview;
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.RichTextBox rtbLog;
+        private System.Windows.Forms.Label lblPrinterCounter;
+        private System.Windows.Forms.Label lblPrinterSerial;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

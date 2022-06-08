@@ -33,11 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Allcard.Printer.Evolis">
-      <HintPath>..\Allcard.Printer.Evolis\bin\Debug\Allcard.Printer.Evolis.dll</HintPath>
+    <Reference Include="Allcard.Printer.Evolis, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\acc-printer-evolis-dll\bin\Debug\Allcard.Printer.Evolis.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Printing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
